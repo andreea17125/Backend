@@ -4,14 +4,264 @@
     "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj": {
+    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj",
-        "projectName": "TerrainApp.API",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj",
+        "projectName": "TerrainApp.API.BusinessLogic",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj",
+        "projectName": "TerrainApp.API.DataAbstraction",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj",
+        "projectName": "TerrainApp.API.Database",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj",
+        "projectName": "TerrainApp.API.Domain",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +300,188 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj",
+        "projectName": "TerrainApp.API.Repositories",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj",
+        "projectName": "TerrainApp.API",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\TerrainApp.API.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.DataAbstraction\\TerrainApp.API.DataAbstraction.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Database\\TerrainApp.API.Database.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

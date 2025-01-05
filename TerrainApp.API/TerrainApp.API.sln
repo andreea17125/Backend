@@ -5,6 +5,18 @@ VisualStudioVersion = 17.12.35506.116 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API", "TerrainApp.API\TerrainApp.API.csproj", "{2E32FF9C-5C2F-4858-B469-C5E57EF01065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API.Domain", "TerrainApp.API.Domain\TerrainApp.API.Domain.csproj", "{B416A83E-931F-4348-90D7-6A453FD64318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API.Repositories", "TerrainApp.API.Repositories\TerrainApp.API.Repositories.csproj", "{23F117F1-D2EC-417F-889D-B87C06B1863E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API.BusinessLogic", "TerrainApp.API.BusinessLogic\TerrainApp.API.BusinessLogic.csproj", "{4A623EA6-445A-4BAF-BB62-269AEA6361B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API.Database", "TerrainApp.API.Database\TerrainApp.API.Database.csproj", "{66903C81-0ABE-4B97-BBEC-472EE1BCB174}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API.DataAbstraction", "TerrainApp.API.DataAbstraction\TerrainApp.API.DataAbstraction.csproj", "{880DDD02-D6E6-4C00-8FD0-BAD9024ED8B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainApp.API.CommonDomain", "TerrainApp.API.CommonDomain\TerrainApp.API.CommonDomain.csproj", "{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +27,30 @@ Global
 		{2E32FF9C-5C2F-4858-B469-C5E57EF01065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E32FF9C-5C2F-4858-B469-C5E57EF01065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E32FF9C-5C2F-4858-B469-C5E57EF01065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B416A83E-931F-4348-90D7-6A453FD64318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B416A83E-931F-4348-90D7-6A453FD64318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B416A83E-931F-4348-90D7-6A453FD64318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B416A83E-931F-4348-90D7-6A453FD64318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23F117F1-D2EC-417F-889D-B87C06B1863E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23F117F1-D2EC-417F-889D-B87C06B1863E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23F117F1-D2EC-417F-889D-B87C06B1863E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23F117F1-D2EC-417F-889D-B87C06B1863E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A623EA6-445A-4BAF-BB62-269AEA6361B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A623EA6-445A-4BAF-BB62-269AEA6361B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A623EA6-445A-4BAF-BB62-269AEA6361B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A623EA6-445A-4BAF-BB62-269AEA6361B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66903C81-0ABE-4B97-BBEC-472EE1BCB174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66903C81-0ABE-4B97-BBEC-472EE1BCB174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66903C81-0ABE-4B97-BBEC-472EE1BCB174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66903C81-0ABE-4B97-BBEC-472EE1BCB174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880DDD02-D6E6-4C00-8FD0-BAD9024ED8B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880DDD02-D6E6-4C00-8FD0-BAD9024ED8B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880DDD02-D6E6-4C00-8FD0-BAD9024ED8B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880DDD02-D6E6-4C00-8FD0-BAD9024ED8B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

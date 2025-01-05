@@ -1,0 +1,30 @@
+# Ignore these files 
+#Ignore .vs folder
+.vs/
+
+#Ignore build output directories
+bin/
+obj/
+
+#Ignore temporary files
+*.tmp
+*.log
+
+#Ignore user-specific files
+*.user
+*.suo
+
+#Ignore backups
+*.bak
+*.swp
+
+#Ignore publish output
+publish/
+
+#Ignore other IDE-specific folders
+.idea/
+.vscode/
+
+#Ignore system files
+.DS_Store
+Thumbs.db

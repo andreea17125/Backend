@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TerrainApp.API.DataAbstraction\TerrainApp.API.DataAbstraction.csproj" />
+    <ProjectReference Include="..\TerrainApp.API.Database\TerrainApp.API.Database.csproj" />
+    <ProjectReference Include="..\TerrainApp.API.Domain\TerrainApp.API.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

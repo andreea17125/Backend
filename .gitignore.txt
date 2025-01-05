@@ -1,7 +1,16 @@
-*.bin
-*.dll
-
-
+.vs/
+*.vsidx
+*.vssscc
+*.user
+*.suo
+*.cache
+*.pdb
+*.obj
 bin/
 obj/
+
+
+*.dll
+*.exe
+*.log
 
