@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TerrainApp.API.BusinessLogic.Auth.Login;
 using TerrainApp.API.BusinessLogic.Auth.Refresh;
+using TerrainApp.API.BusinessLogic.Auth.ResetPassword;
 using TerrainApp.API.BusinessLogic.Users.Register;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Domain.UserDomain;
@@ -16,10 +17,10 @@ namespace TerrainApp.API.Controllers
         {
             this.mediator = mediator;
           
-
+            
         }
         [HttpPost("Login")]
-        public async Task<ActionResult> Login(LoginRequest loginRequest)
+        public async Task<ActionResult> Login([FromBody] LoginRequest loginRequest)
         {
             LoginResponse response = await this.mediator.Send(loginRequest);
             return this.Ok(response);
@@ -36,6 +37,18 @@ namespace TerrainApp.API.Controllers
 
 
         }
+        [HttpPost("Reset")]
+        public async Task<ActionResult> Reset([FromBody] ResetPasswordRequest resetRequest)
+        {
+            ResetPasswordResponse response = await this.mediator.Send(resetRequest);
+            return this.Ok(response);
+
+
+
+        }
+
+
+
 
     }
 

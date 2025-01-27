@@ -70,7 +70,7 @@ namespace TerrainApp.API.BusinessLogic.Auth.Refresh
             using (var rng = RandomNumberGenerator.Create())
             {
                 rng.GetBytes(randomNumber);
-                return Convert.ToBase64String(randomNumber); // Secure random refresh token
+                return Convert.ToBase64String(randomNumber);
             }
         }
         private JwtSecurityToken GenerateAccessToken(string RefreshToken)
@@ -84,7 +84,7 @@ namespace TerrainApp.API.BusinessLogic.Auth.Refresh
                 issuer: "localhost",
                 audience: "localhost",
                 claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(1), // Token expiration time
+                expires: DateTime.UtcNow.AddMinutes(1), 
                 signingCredentials: new SigningCredentials(
                     new SymmetricSecurityKey(Encoding.UTF8.GetBytes("averylongsecretkeythatisrequiredtobeused")),
                     SecurityAlgorithms.HmacSha256)

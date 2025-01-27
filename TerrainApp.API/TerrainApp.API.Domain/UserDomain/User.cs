@@ -46,7 +46,8 @@ namespace TerrainApp.API.Domain.UserDomain
         
         public int FailedLoginAttempts { get; set; } = 0;
         public DateTime? AccountLockoutTime { get; set; }
-
+        public string Username { get; set; }
+        public string ConfirmPassword { get; set; }
 
         public User()
         {

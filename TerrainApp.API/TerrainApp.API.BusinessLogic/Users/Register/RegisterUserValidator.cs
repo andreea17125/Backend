@@ -13,6 +13,10 @@ namespace TerrainApp.API.BusinessLogic.Users.Register
             this.RuleFor(x => x.Password).NotEmpty();
 
             this.RuleFor(x => x.Email).NotEmpty();
+
+            this.RuleFor(x => x.Username).NotEmpty();
+
+            this.RuleFor(x => x.ConfirmPassword.Equals(x.Password)).Equal(true);
         } 
     }
 }

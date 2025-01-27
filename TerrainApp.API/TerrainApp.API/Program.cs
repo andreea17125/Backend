@@ -61,9 +61,17 @@ internal class Program
         {
             return new DataBase();
         });
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowSpecificOrigin",
+                builder => builder.WithOrigins("http://localhost:5173")
+                                  .AllowAnyHeader()
+                                  .AllowAnyMethod());
+        });
 
-       
+
         var app = builder.Build();
+        app.UseCors("AllowSpecificOrigin");
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
