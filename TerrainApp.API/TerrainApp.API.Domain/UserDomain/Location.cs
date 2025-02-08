@@ -2,19 +2,21 @@
 {
     public class Location
     {
-        private string country;
-        private string city;
-        private string address;
-        private double latitude;
-        private double longitude;
+        private string Country;
+        private string City;
+        private string Address;
+        private string PostalCode;
+        private int StreetNumber;
+       
 
-        public Location(string country, string city, string address, double latitude, double longitude)
+        public Location(string Country, string CIty, string Address,int StreetNumber,string ZipCode)
         {
-            this.country = country;
-            this.city = city;
-            this.address = address;
-            this.latitude = latitude;
-            this.longitude = longitude;
+            this.Country = Country;
+            this.City = City;
+            this.Address = Address;
+            this.PostalCode = PostalCode;
+            this.StreetNumber = StreetNumber;
+          
         }
         public Location()
         {

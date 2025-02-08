@@ -16,5 +16,7 @@ namespace TerrainApp.API.BusinessLogic.Users.Register
 
         public string ConfirmPassword { get; set; } = string.Empty;
 
+        public bool? Approved { get; set; } = null;
+
     }
 }

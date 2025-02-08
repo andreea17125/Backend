@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TerrainApp.API.Domain.UserDomain
+namespace TerrainApp.API.BusinessLogic.RegisterUserRequest.CreateUserRegisterRequest
 {
-   public enum EnumUser
+    internal class CreateRegisterRequestHandler
     {
-      Admin,
-      Regular,
-      Guest,
-      Premium
-
     }
 }

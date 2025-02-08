@@ -24,7 +24,7 @@ namespace TerrainApp.API.BusinessLogic.Users.Register
            
             User userToInsert = new User();
             userToInsert.Email = request.Email;
-            userToInsert.Password = request.Password;
+            userToInsert.PasswordHash = request.Password;
             userToInsert.Username = request.Username;
             userToInsert.ConfirmPassword= request.ConfirmPassword;
             await this._users.InsertOneAsync(userToInsert);

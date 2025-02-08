@@ -20,4 +20,13 @@
     <ProjectReference Include="..\TerrainApp.API.Repositories\TerrainApp.API.Repositories.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="RegisterUserRequest\DeleteUserRegisterRequest\" />
+    <Folder Include="RegisterUserRequest\RejectUserRegisterRequest\" />
+    <Folder Include="RegisterUserRequest\GetAllUserRegisterRequests\" />
+    <Folder Include="RegisterUserRequest\GetRegisterRequestUserById\" />
+    <Folder Include="RegisterUserRequest\ApproveRegisterRequest\" />
+    <Folder Include="RegisterUserRequest\UpdateUserRegisterRequest\" />
+  </ItemGroup>
+
 </Project>

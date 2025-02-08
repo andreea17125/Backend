@@ -13,6 +13,7 @@ using TerrainApp.API.BusinessLogic.Auth.Login;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Database.DataBase;
 using TerrainApp.API.Domain;
+using TerrainApp.API.Domain.UserDomain;
 
 namespace TerrainApp.API.BusinessLogic.Auth.Refresh
 {
@@ -28,7 +29,8 @@ namespace TerrainApp.API.BusinessLogic.Auth.Refresh
 
         public async Task<RefreshResponse> Handle(RefreshRequest request, CancellationToken cancellationToken)
         {
-            //cauta mi user ul in db dupa email verificam daca datele sunt valide
+
+            var GeneratorR = new GenerateAccessTokens();
             var LoginHistory = await this.dataBase.GetLoginHistoryCollection().Find(Builders<LoginHistory>.Filter.Eq(x => x.Refreshtoken, request.RefreshToken)).FirstOrDefaultAsync();
             var user = dataBase.GetUserCollection().Find(u => u.Email == LoginHistory.Email).FirstOrDefault();
 
@@ -39,10 +41,19 @@ namespace TerrainApp.API.BusinessLogic.Auth.Refresh
                 RefreshResponse.Status = 401;
                 return RefreshResponse;
             }
-            
+            string role = "Guest";
+            if (user.Role == EnumUser.Admin)
+            {
+                role = "Admin";
+            }
+
+            else if (user.Role == EnumUser.Regular)
+            {
+                role = "Regular";
+            }
             var email = LoginHistory.Email;
-            var newAccessToken = GenerateAccessToken(email);
-            var newRefreshToken = GenerateRefreshToken();
+            var newAccessToken =GeneratorR.GenerateAccessToken(email,role);
+            var newRefreshToken = GeneratorR.GenerateRefreshToken();
             var document = await this.dataBase.GetLoginHistoryCollection().Find(Builders<LoginHistory>.Filter.Eq(x => x.Email, email)).FirstOrDefaultAsync();
             if (document != null)
             {
@@ -56,42 +67,15 @@ namespace TerrainApp.API.BusinessLogic.Auth.Refresh
 
             RefreshResponse refreshResponse = new RefreshResponse();
             refreshResponse.RefreshToken = newRefreshToken;
-            refreshResponse.AccessToken = new JwtSecurityTokenHandler().WriteToken(newAccessToken);
-            refreshResponse.ExpiresIn = 60;
+            refreshResponse.AccessToken = newAccessToken;
+            refreshResponse.ExpiresIn = 300;
             refreshResponse.Status = 200;
             refreshResponse.Message = "Login cu succes";
             return refreshResponse;
 
 
         }
-        private string GenerateRefreshToken()
-        {
-            var randomNumber = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
-            {
-                rng.GetBytes(randomNumber);
-                return Convert.ToBase64String(randomNumber);
-            }
-        }
-        private JwtSecurityToken GenerateAccessToken(string RefreshToken)
-        {
-            var claims = new List<Claim>
-                                         {
-                           new Claim(ClaimTypes.Name, RefreshToken)
-                                         };
-
-            var token = new JwtSecurityToken(
-                issuer: "localhost",
-                audience: "localhost",
-                claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(1), 
-                signingCredentials: new SigningCredentials(
-                    new SymmetricSecurityKey(Encoding.UTF8.GetBytes("averylongsecretkeythatisrequiredtobeused")),
-                    SecurityAlgorithms.HmacSha256)
-            );
-
-            return token;
-        }
+       
     }
 }
 

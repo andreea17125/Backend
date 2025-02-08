@@ -27,7 +27,7 @@ namespace TerrainApp.API.BusinessLogic.Users.Update
                 .Set(x => x.Email, request.Email)
                 .Set(x => x.FirstName, request.FirstName)
                 .Set(x => x.LastName, request.LastName)
-                .Set(x => x.Password, request.Password);
+                .Set(x => x.PasswordHash, request.Password);
 
             var result = await this._users.UpdateOneAsync(filter, update);
 

@@ -23,7 +23,7 @@ namespace TerrainApp.API.Domain.UserDomain
         public string Email { get; set; } = string.Empty;
 
    
-        public string Password { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
 
         public string PhoneNumber { get; set; } = string.Empty;
         public string ProfilePictureUrl { get; set; } = string.Empty;
@@ -41,7 +41,7 @@ namespace TerrainApp.API.Domain.UserDomain
         public List<string> PurchaseHistory { get; set; } = new List<string>();
 
        
-        public Location UserLocation { get; set; } = new Location("", "", "", 0, 0);
+        public Location UserLocation { get; set; } = new Location();
 
         
         public int FailedLoginAttempts { get; set; } = 0;
@@ -72,7 +72,7 @@ namespace TerrainApp.API.Domain.UserDomain
             if (!IsPasswordStrong(newPassword))
                 throw new InvalidOperationException("New password is not strong enough.");
 
-            Password = HashPassword(newPassword);
+            PasswordHash = HashPassword(newPassword);
         }
 
       
@@ -134,7 +134,7 @@ namespace TerrainApp.API.Domain.UserDomain
 
         private bool VerifyPassword(string password)
         {
-            var parts = Password.Split(':');
+            var parts = PasswordHash.Split(':');
             var salt = Convert.FromBase64String(parts[0]);
             var storedHash = Convert.FromBase64String(parts[1]);
 
@@ -153,10 +153,7 @@ namespace TerrainApp.API.Domain.UserDomain
         }
 
 
-        public void UpdateLocation(string country, string city, string address, double latitude, double longitude)
-        {
-            UserLocation = new Location(country, city, address, latitude, longitude);
-        }
+       
 
 
         public void IncrementFailedLoginAttempts()
