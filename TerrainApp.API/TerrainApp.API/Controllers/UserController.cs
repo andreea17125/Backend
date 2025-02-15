@@ -1,6 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
+using TerrainApp.API.BusinessLogic.RegisterUserRequest.CreateUserRegisterRequest;
 using TerrainApp.API.BusinessLogic.Users.Delete;
 using TerrainApp.API.BusinessLogic.Users.GetAllUsers;
 using TerrainApp.API.BusinessLogic.Users.GetUser;
@@ -25,14 +27,14 @@ namespace TerrainApp.API.Controllers
             this._users = dataBase.GetMongoDatabase().GetCollection<User>("Users");
         }
 
-        [HttpPost("CreateUser")]
-        public async Task<ActionResult> CreateUser(RegisterUserRequest user)
-        {
-            RegisterUserResponses response = await this.mediator.Send(user);
-            return this.Ok(response);
-        }
+        [HttpPost("RequestRegister")]
+    public async Task<ActionResult> RejectUserRequest(CreateRegisterRequestRequest request, CancellationToken cancellationToken)
+    {
+      var response = await this.mediator.Send(request, cancellationToken);
+      return this.Ok(response);
+    }
 
-        [HttpPut("UpdateUser")]
+    [HttpPut("UpdateUser")]
         public async Task<ActionResult> UpdateUser(UpdateUserRequest user)
         {
             UpdateUserResponse response = await this.mediator.Send(user);

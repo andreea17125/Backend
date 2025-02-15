@@ -10,21 +10,22 @@ using TerrainApp.API.Domain.UserDomain;
 namespace TerrainApp.API.Domain.RequestRegister
 {
 
-    
-    public class UserRegisterRequest
+
+  public class UserRegisterRequest
+  {
+    public string Email;
+    public string PasswordHash;
+    public string Username;
+    public RegisterRequestStatus Status = RegisterRequestStatus.Pending;
+    public Location Location;
+
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+
+
+    public UserRegisterRequest()
     {
-        public string Email;
-        public string PasswordHash;
-        public string Username;
-        public Location Location;
-
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-
-
-        public UserRegisterRequest()
-        {
-            this.Id = ObjectId.GenerateNewId().ToString();
-        }
+      this.Id = ObjectId.GenerateNewId().ToString();
     }
+  }
 }
