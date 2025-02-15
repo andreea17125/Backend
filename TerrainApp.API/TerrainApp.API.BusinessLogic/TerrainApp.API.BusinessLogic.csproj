@@ -23,7 +23,6 @@
   <ItemGroup>
     <Folder Include="RegisterUserRequest\DeleteUserRegisterRequest\" />
     <Folder Include="RegisterUserRequest\RejectUserRegisterRequest\" />
-    <Folder Include="RegisterUserRequest\GetAllUserRegisterRequests\" />
     <Folder Include="RegisterUserRequest\GetRegisterRequestUserById\" />
     <Folder Include="RegisterUserRequest\ApproveRegisterRequest\" />
     <Folder Include="RegisterUserRequest\UpdateUserRegisterRequest\" />
