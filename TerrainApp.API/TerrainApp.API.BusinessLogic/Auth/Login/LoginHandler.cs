@@ -13,6 +13,7 @@ using MongoDB.Driver;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Database.DataBase;
 using TerrainApp.API.Domain;
+using TerrainApp.API.Domain.CommonDomain;
 using TerrainApp.API.Domain.UserDomain;
 
 namespace TerrainApp.API.BusinessLogic.Auth.Login

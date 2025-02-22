@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using TerrainApp.API.Domain.CommonDomain;
 
 namespace TerrainApp.API.Domain.UserDomain
 {

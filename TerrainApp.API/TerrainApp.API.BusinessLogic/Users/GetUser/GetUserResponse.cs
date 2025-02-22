@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
+using TerrainApp.API.CommonDomain;
 using TerrainApp.API.Domain.UserDomain;
 
 namespace TerrainApp.API.BusinessLogic.Users.GetUser
 {
-    public class GetUserResponse 
+  public class GetUserResponse : ResponseDto
     {
-        public string Message { get; set; }
-        public HttpStatusCode StatusCode { get; set; }
         public User User { get; set; }
     }
 }

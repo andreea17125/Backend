@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TerrainApp.API.CommonDomain\TerrainApp.API.CommonDomain.csproj" />
     <ProjectReference Include="..\TerrainApp.API.DataAbstraction\TerrainApp.API.DataAbstraction.csproj" />
     <ProjectReference Include="..\TerrainApp.API.Domain\TerrainApp.API.Domain.csproj" />
     <ProjectReference Include="..\TerrainApp.API.Repositories\TerrainApp.API.Repositories.csproj" />
@@ -23,7 +24,6 @@
   <ItemGroup>
     <Folder Include="RegisterUserRequest\DeleteUserRegisterRequest\" />
     <Folder Include="RegisterUserRequest\RejectUserRegisterRequest\" />
-    <Folder Include="RegisterUserRequest\GetAllUserRegisterRequests\" />
     <Folder Include="RegisterUserRequest\GetRegisterRequestUserById\" />
     <Folder Include="RegisterUserRequest\ApproveRegisterRequest\" />
     <Folder Include="RegisterUserRequest\UpdateUserRegisterRequest\" />

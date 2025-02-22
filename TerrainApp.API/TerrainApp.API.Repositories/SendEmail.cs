@@ -14,16 +14,21 @@ namespace TerrainApp.API.Repositories
 
         public SendEmail()
         {
-            this.smtpClient = new SmtpClient("smtp-mail.outlook.com");
-            this.smtpClient.Port = 587;
-            this.smtpClient.Credentials = new NetworkCredential("testanapp@outlook.com","andaosfg123");
-            this.smtpClient.EnableSsl = true;
-        }
-        public bool Send(MailMessage mailMessage)
+      this.smtpClient = new SmtpClient("smtp.office365.com")
+      {
+        Port = 587,
+        Credentials = new NetworkCredential("robifodor1234576@outlook.com", "atngfprlikcxiiay"),
+        EnableSsl = true, // This enables TLS encryption
+        DeliveryMethod = SmtpDeliveryMethod.Network,
+        UseDefaultCredentials = false
+      };
+
+    }
+    public bool Send(MailMessage mailMessage)
         {
             try
             {
-                mailMessage.From = new MailAddress("testanapp@outlook.com", "TerrainApp");
+                mailMessage.From = new MailAddress("robifodor1234576@outlook.com", "TerrainApp");
                 mailMessage.BodyEncoding = Encoding.UTF8;
 
                 this.smtpClient.Send(mailMessage);

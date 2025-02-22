@@ -2,11 +2,11 @@
 {
     public class Location
     {
-        private string Country;
-        private string City;
-        private string Address;
-        private string PostalCode;
-        private int StreetNumber;
+        public string Country { get; set; }
+        public string City { get; set; }
+        public string Address { get; set; }
+        public string PostalCode { get; set; }
+        public int StreetNumber { get; set; }
        
 
         public Location(string Country, string CIty, string Address,int StreetNumber,string ZipCode)
