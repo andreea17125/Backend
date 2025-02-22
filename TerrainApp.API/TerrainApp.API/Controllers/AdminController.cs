@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCountries;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.GetAllUserRegisterRequests;
 using TerrainApp.API.BusinessLogic.Users.Register;
@@ -28,7 +29,14 @@ namespace TerrainApp.API.Controllers
             return this.Ok(response);
         }
 
-        [HttpGet("GetUserRegistrationRequest")]
+    [HttpPost("ImportCountries")]
+    public async Task<ActionResult> ImportCountries(ImportCountriesRequest request, CancellationToken cancellationToken)
+    {
+      var response = await this.mediator.Send(request, cancellationToken);
+      return this.Ok(response);
+    }
+
+    [HttpGet("GetUserRegistrationRequest")]
         public async Task<ActionResult> GetUserRequest(CancellationToken cancellationToken)
         {
             GetAllUserRegisterRequestsRequest GetAllUserRegistrationRequest = new();

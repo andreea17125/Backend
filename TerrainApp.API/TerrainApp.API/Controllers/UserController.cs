@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCountries;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.CreateUserRegisterRequest;
 using TerrainApp.API.BusinessLogic.Users.Delete;
@@ -31,6 +32,13 @@ namespace TerrainApp.API.Controllers
     [HttpPost("RequestRegister")]
     public async Task<ActionResult> RejectUserRequest(CreateRegisterRequestRequest request, CancellationToken cancellationToken)
     {
+      var response = await this.mediator.Send(request, cancellationToken);
+      return this.Ok(response);
+    }
+    [HttpGet("FetchCountries")]
+    public async Task<ActionResult> FetchCountries(CancellationToken cancellationToken)
+    {
+      FetchCountriesRequest request = new FetchCountriesRequest();
       var response = await this.mediator.Send(request, cancellationToken);
       return this.Ok(response);
     }

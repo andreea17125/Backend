@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
+using TerrainApp.API.CommonDomain;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Domain;
 using TerrainApp.API.Domain.RequestRegister;
@@ -49,5 +50,16 @@ namespace TerrainApp.API.Database.DataBase
     {
       return this._mongoDatabase.GetCollection<UserRegisterRequest>("RegistrationRequest");
     }
+
+    public IMongoCollection<Country> GetCountriesCollection()
+    {
+      return this._mongoDatabase.GetCollection<Country>("Countries");
+    }
+    /*
+         public IMongoCollection<CityDto> GetCitiesCollection()
+    {
+      return this._mongoDatabase.GetCollection<CityDto>("Cities");
+    }
+     */
   }
 }
