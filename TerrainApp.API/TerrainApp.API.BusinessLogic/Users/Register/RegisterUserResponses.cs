@@ -4,18 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using TerrainApp.API.CommonDomain;
 
 namespace TerrainApp.API.BusinessLogic.Users.Register
 {
-    public class RegisterUserResponses
-    {
-        public string Message { get; set; }
+  public class RegisterUserResponses : ResponseDto
+  {
+    public string UserId { get; set; }
 
-        public HttpStatusCode StatusCode { get; set; }
-
-        public string UserId { get; set; }  
-
-
-
-    }
+  }
 }

@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
+using TerrainApp.API.CommonDomain;
 
 namespace TerrainApp.API.BusinessLogic.Users.Update
 {
-        public class UpdateUserResponse
-    {
-        public string Message { get; set; }
-
-        public HttpStatusCode StatusCode { get; set; }
-
+  public class UpdateUserResponse : ResponseDto
+  {
         public string UserId { get; set; }
     }
 }

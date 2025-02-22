@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TerrainApp.API.Domain.UserDomain
+namespace TerrainApp.API.Domain.CommonDomain
 {
    public enum EnumUser
     {

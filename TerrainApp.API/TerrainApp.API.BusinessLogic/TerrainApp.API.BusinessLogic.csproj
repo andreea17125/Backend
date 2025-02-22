@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TerrainApp.API.CommonDomain\TerrainApp.API.CommonDomain.csproj" />
     <ProjectReference Include="..\TerrainApp.API.DataAbstraction\TerrainApp.API.DataAbstraction.csproj" />
     <ProjectReference Include="..\TerrainApp.API.Domain\TerrainApp.API.Domain.csproj" />
     <ProjectReference Include="..\TerrainApp.API.Repositories\TerrainApp.API.Repositories.csproj" />
