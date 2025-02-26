@@ -29,7 +29,7 @@ namespace TerrainApp.API.Controllers
 
         }
         [HttpPost("Refresh")]
-        public async Task<ActionResult> Refresh(RefreshRequest refreshRequest)
+        public async Task<ActionResult> Refresh([FromBody]RefreshRequest refreshRequest)
         {
             RefreshResponse response = await this.mediator.Send(refreshRequest);
             return this.Ok(response);
