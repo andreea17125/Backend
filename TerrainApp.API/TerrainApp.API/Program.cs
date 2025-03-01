@@ -96,7 +96,23 @@ internal class Program
         builder.Services.AddCors(options =>
         {
             options.AddPolicy("AllowSpecificOrigin",
-                builder => builder.WithOrigins("http://localhost:5173")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                builder => builder.WithOrigins("http://localhost:5176")
+=======
+                builder => builder.AllowAnyOrigin()
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+                builder => builder.AllowAnyOrigin()
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+                builder => builder.AllowAnyOrigin()
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+                builder => builder.AllowAnyOrigin()
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
                                   .AllowAnyHeader()
                                   .AllowAnyMethod());
         });

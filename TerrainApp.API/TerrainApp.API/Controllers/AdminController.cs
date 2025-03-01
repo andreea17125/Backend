@@ -1,5 +1,19 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCities;
+=======
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCountries;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.GetAllUserRegisterRequests;
 using TerrainApp.API.BusinessLogic.Users.Register;
@@ -28,7 +42,40 @@ namespace TerrainApp.API.Controllers
             return this.Ok(response);
         }
 
+    [HttpPost("ImportCountries")]
+    public async Task<ActionResult> ImportCountries(ImportCountriesRequest request, CancellationToken cancellationToken)
+    {
+      var response = await this.mediator.Send(request, cancellationToken);
+      return this.Ok(response);
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        [HttpPost("ImportCities")]
+        public async Task<ActionResult> ImportCities(ImportCitiesRequest request, CancellationToken cancellationToken)
+        {
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
+
         [HttpGet("GetUserRegistrationRequest")]
+=======
+
+    [HttpGet("GetUserRegistrationRequest")]
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+
+    [HttpGet("GetUserRegistrationRequest")]
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+
+    [HttpGet("GetUserRegistrationRequest")]
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+=======
+
+    [HttpGet("GetUserRegistrationRequest")]
+>>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
         public async Task<ActionResult> GetUserRequest(CancellationToken cancellationToken)
         {
             GetAllUserRegisterRequestsRequest GetAllUserRegistrationRequest = new();

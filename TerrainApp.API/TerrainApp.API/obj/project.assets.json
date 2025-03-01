@@ -533,6 +533,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.11",
           "Microsoft.IdentityModel.Tokens": "8.3.0",
           "MongoDB.Driver": "3.0.0",
+          "TerrainApp.API.CommonDomain": "1.0.0",
           "TerrainApp.API.DataAbstraction": "1.0.0",
           "TerrainApp.API.Domain": "1.0.0",
           "TerrainApp.API.Repositories": "1.0.0"
@@ -542,6 +543,19 @@
         },
         "runtime": {
           "bin/placeholder/TerrainApp.API.BusinessLogic.dll": {}
+        }
+      },
+      "TerrainApp.API.CommonDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "MongoDB.Bson": "3.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TerrainApp.API.CommonDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TerrainApp.API.CommonDomain.dll": {}
         }
       },
       "TerrainApp.API.DataAbstraction/1.0.0": {
@@ -577,7 +591,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "MongoDB.Bson": "3.0.0"
+          "MongoDB.Bson": "3.0.0",
+          "TerrainApp.API.CommonDomain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TerrainApp.API.Domain.dll": {}
@@ -1639,6 +1654,11 @@
       "path": "../TerrainApp.API.BusinessLogic/TerrainApp.API.BusinessLogic.csproj",
       "msbuildProject": "../TerrainApp.API.BusinessLogic/TerrainApp.API.BusinessLogic.csproj"
     },
+    "TerrainApp.API.CommonDomain/1.0.0": {
+      "type": "project",
+      "path": "../TerrainApp.API.CommonDomain/TerrainApp.API.CommonDomain.csproj",
+      "msbuildProject": "../TerrainApp.API.CommonDomain/TerrainApp.API.CommonDomain.csproj"
+    },
     "TerrainApp.API.DataAbstraction/1.0.0": {
       "type": "project",
       "path": "../TerrainApp.API.DataAbstraction/TerrainApp.API.DataAbstraction.csproj",
@@ -1788,5 +1808,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
