@@ -1,18 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCities;
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCountries;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.GetAllUserRegisterRequests;
@@ -48,10 +38,7 @@ namespace TerrainApp.API.Controllers
       var response = await this.mediator.Send(request, cancellationToken);
       return this.Ok(response);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         [HttpPost("ImportCities")]
         public async Task<ActionResult> ImportCities(ImportCitiesRequest request, CancellationToken cancellationToken)
         {
@@ -60,23 +47,8 @@ namespace TerrainApp.API.Controllers
         }
 
         [HttpGet("GetUserRegistrationRequest")]
-=======
-
-    [HttpGet("GetUserRegistrationRequest")]
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
-
-    [HttpGet("GetUserRegistrationRequest")]
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
-
-    [HttpGet("GetUserRegistrationRequest")]
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
-
-    [HttpGet("GetUserRegistrationRequest")]
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-        public async Task<ActionResult> GetUserRequest(CancellationToken cancellationToken)
+    public async Task<ActionResult> GetUserRequest(CancellationToken cancellationToken)
+  
         {
             GetAllUserRegisterRequestsRequest GetAllUserRegistrationRequest = new();
 

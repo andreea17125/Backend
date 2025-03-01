@@ -19,21 +19,10 @@ namespace TerrainApp.API.DataAbstraction.IDataBase
 
     public IMongoCollection<Country> GetCountriesCollection();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     public IMongoCollection<City> GetCitiesCollection();
 
 
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-    //public IMongoCollection<> GetCitiesCollection();
+   
   }
 }

@@ -55,28 +55,13 @@ namespace TerrainApp.API.Database.DataBase
     {
       return this._mongoDatabase.GetCollection<Country>("Countries");
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         public IMongoCollection<City> GetCitiesCollection()
         {
             return this._mongoDatabase.GetCollection<City>("Cities");
         }
     }
-=======
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-    /*
-         public IMongoCollection<CityDto> GetCitiesCollection()
-    {
-      return this._mongoDatabase.GetCollection<CityDto>("Cities");
-    }
-     */
-  }
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+    
+      
+
 }

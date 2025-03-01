@@ -1,25 +1,19 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCities;
 using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCountries;
 using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCities;
-=======
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCountries;
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCountries;
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCountries;
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
+
 using TerrainApp.API.BusinessLogic.OutSourcedData.FetchCountries;
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.CreateUserRegisterRequest;
 using TerrainApp.API.BusinessLogic.Users.Delete;
@@ -67,10 +61,7 @@ namespace TerrainApp.API.Controllers
       var response = await this.mediator.Send(request, cancellationToken);
       return this.Ok(response);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         [HttpGet("FetchCities/{country}")]
        public async Task<ActionResult> FetchCities(string country, CancellationToken cancellationToken)
         {
@@ -78,14 +69,7 @@ namespace TerrainApp.API.Controllers
             var response = await this.mediator.Send(request, cancellationToken);
             return this.Ok(response);
         }
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
-=======
->>>>>>> 4cd1c94e815af3b87623d10b2d75a7b9deeff813
+
 
         
 
