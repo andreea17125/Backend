@@ -54,13 +54,7 @@ namespace TerrainApp.API.Controllers
       var response = await this.mediator.Send(request, cancellationToken);
       return this.Ok(response);
     }
-    [HttpGet("FetchCountries")]
-    public async Task<ActionResult> FetchCountries(CancellationToken cancellationToken)
-    {
-      FetchCountriesRequest request = new FetchCountriesRequest();
-      var response = await this.mediator.Send(request, cancellationToken);
-      return this.Ok(response);
-    }
+   
 
         [HttpGet("FetchCities/{country}")]
        public async Task<ActionResult> FetchCities(string country, CancellationToken cancellationToken)

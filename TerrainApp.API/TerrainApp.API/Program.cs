@@ -96,19 +96,9 @@ internal class Program
         builder.Services.AddCors(options =>
         {
             options.AddPolicy("AllowSpecificOrigin",
-
-                builder => builder.WithOrigins("http://localhost:5176")
-
-                builder => builder.AllowAnyOrigin()
-
-                builder => builder.AllowAnyOrigin()
-
-                builder => builder.AllowAnyOrigin()
-
-                builder => builder.AllowAnyOrigin()
-
-                                  .AllowAnyHeader()
-                                  .AllowAnyMethod());
+                policy => policy.WithOrigins("http://localhost:5176")
+                                .AllowAnyMethod()
+                                .AllowAnyHeader());
         });
 
 
