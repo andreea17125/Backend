@@ -12,6 +12,10 @@ using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Domain;
 using TerrainApp.API.Domain.UserDomain;
 using TerrainApp.API.Repositories;
+using System.Xml.Linq;
+using XSystem.Security.Cryptography;
+using XAct.Messages;
+using XAct.Users;
 
 namespace TerrainApp.API.BusinessLogic.Auth.ResetPassword
 {
@@ -27,7 +31,7 @@ namespace TerrainApp.API.BusinessLogic.Auth.ResetPassword
     public async Task<ResetPasswordResponse> Handle(ResetPasswordRequest request, CancellationToken cancellationToken)
     {
       var userCollection = dataBase.GetUserCollection();
-      var user = await userCollection.Find(Builders<User>.Filter.Eq(x => x.Email, request.Email)).FirstOrDefaultAsync();
+      var user = await userCollection.Find(Builders<Domain.UserDomain.User>.Filter.Eq(x => x.Email, request.Email)).FirstOrDefaultAsync();
       if (user == null)
       {
         ResetPasswordResponse reset = new ResetPasswordResponse();
@@ -36,17 +40,8 @@ namespace TerrainApp.API.BusinessLogic.Auth.ResetPassword
 
         return reset;
       }
-      var sendemail = new SendEmail();
-      MailMessage mail = new MailMessage
-      {
-        From = new MailAddress("robifodor1234576@outlook.com"),
-        Subject = "Test Email",
-        Body = "Hello.",
-        IsBodyHtml = false
-
-      };
-      mail.To.Add(request.Email);
-      sendemail.Send(mail);
+      var finalEncryptedData = this.GenerateUniqueResetCode(user);
+      await this.SendEmailAndStoreUniqueCode(finalEncryptedData, user);
 
       return new ResetPasswordResponse
       {
@@ -54,9 +49,50 @@ namespace TerrainApp.API.BusinessLogic.Auth.ResetPassword
         Message = "Email sent"
 
       };
+    }
 
+    private async Task SendEmailAndStoreUniqueCode(string finalEncryptedData, Domain.UserDomain.User user)
+    {
+      TerrainApp.API.Domain.ResetPassword resetPassword = new()
+      {
+        CreateDate = DateTime.Now,
+        UniqueCode = finalEncryptedData
+      };
+      var userLoginHistory = await this.dataBase.GetLoginHistoryCollection().UpdateOneAsync(Builders<LoginHistory>.Filter.Eq(x => x.Email, user.Email), Builders<LoginHistory>.Update.Set(x => x.ResetPassword, resetPassword));
 
+      var sendemail = new SendEmail();
+      string body = "Hello, " + user.FirstName + "\n here is you custom generated link for reseting the password. If it was not requested by you , ignore it. The link will expire in 5 days \n <a href=\"http://localhost:5173/resetPassword/" + finalEncryptedData + "/" + " > login </ a > ";
+      MailMessage mail = new MailMessage
+      {
+        Subject = "Reset password request",
+        Body = body,
+        IsBodyHtml = true
+      };
+      mail.To.Add(user.Email);
+      sendemail.Send(mail);
+    }
+    private string GenerateUniqueResetCode(Domain.UserDomain.User user)
+    {
+      string userEmail = user.Email;
+      string userPassword = user.PasswordHash;
+      string userId = user.Id;
+      string currentDateTime = DateTime.Now.ToString();
 
+      var byteArrayOfPersonalDocuments = ASCIIEncoding.ASCII.GetBytes(userEmail + userPassword + userId + currentDateTime);
+      byte[] tmpNewHash;
+      tmpNewHash = new MD5CryptoServiceProvider().ComputeHash(byteArrayOfPersonalDocuments);
+      var finalEncryptedData = ByteArrayToString(tmpNewHash);
+      return finalEncryptedData;
+    }
+    private string ByteArrayToString(byte[] arrInput)
+    {
+      int i;
+      StringBuilder sOutput = new StringBuilder(arrInput.Length);
+      for (i = 0; i < arrInput.Length; i++)
+      {
+        sOutput.Append(arrInput[i].ToString("X2"));
+      }
+      return sOutput.ToString();
     }
 
   }

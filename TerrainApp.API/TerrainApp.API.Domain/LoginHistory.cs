@@ -8,17 +8,18 @@ using MongoDB.Bson;
 
 namespace TerrainApp.API.Domain
 {
-   public class LoginHistory
+  public class LoginHistory
+  {
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public string Email { get; set; }
+    public string Refreshtoken { get; set; }
+
+    public ResetPassword ResetPassword { get; set; } = new ResetPassword { UniqueCode = string.Empty, CreateDate = DateTime.Now };
+    public LoginHistory()
     {
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-        public string Email { get; set; }
-        public string Refreshtoken { get; set; }
-
-        public LoginHistory()
-        {
-            this.Id = ObjectId.GenerateNewId().ToString();
-        }
-
+      this.Id = ObjectId.GenerateNewId().ToString();
     }
+
+  }
 }

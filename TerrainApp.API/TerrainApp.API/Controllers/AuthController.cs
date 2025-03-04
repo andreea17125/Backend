@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TerrainApp.API.BusinessLogic.Auth.CheckResetPasswordUniqueCode;
 using TerrainApp.API.BusinessLogic.Auth.Login;
 using TerrainApp.API.BusinessLogic.Auth.Refresh;
 using TerrainApp.API.BusinessLogic.Auth.ResetPassword;
@@ -9,47 +10,55 @@ using TerrainApp.API.Domain.UserDomain;
 
 namespace TerrainApp.API.Controllers
 {
-    public class AuthController : Controller
+  public class AuthController : Controller
+  {
+    IMediator mediator;
+
+    public AuthController(IDataBase dataBase, IMediator mediator)
     {
-        IMediator mediator;
-
-        public AuthController(IDataBase dataBase, IMediator mediator)
-        {
-            this.mediator = mediator;
-          
-            
-        }
-        [HttpPost("Login")]
-        public async Task<ActionResult> Login([FromBody] LoginRequest loginRequest)
-        {
-            LoginResponse response = await this.mediator.Send(loginRequest);
-            return this.Ok(response);
-            
+      this.mediator = mediator;
 
 
-        }
-        [HttpPost("Refresh")]
-        public async Task<ActionResult> Refresh([FromBody]RefreshRequest refreshRequest)
-        {
-            RefreshResponse response = await this.mediator.Send(refreshRequest);
-            return this.Ok(response);
-
-
-
-        }
-        [HttpPost("Reset")]
-        public async Task<ActionResult> Reset([FromBody] ResetPasswordRequest resetRequest)
-        {
-            ResetPasswordResponse response = await this.mediator.Send(resetRequest);
-            return this.Ok(response);
-
-
-
-        }
-
+    }
+    [HttpPost("Login")]
+    public async Task<ActionResult> Login([FromBody] LoginRequest loginRequest)
+    {
+      LoginResponse response = await this.mediator.Send(loginRequest);
+      return this.Ok(response);
 
 
 
     }
+    [HttpPost("Refresh")]
+    public async Task<ActionResult> Refresh([FromBody] RefreshRequest refreshRequest)
+    {
+      RefreshResponse response = await this.mediator.Send(refreshRequest);
+      return this.Ok(response);
+    }
+
+    [HttpGet("ValidateUniqueResetPasswordCode/{uniqueCode}")]
+    public async Task<ActionResult> ValidateUniqueResetPasswordCode(string uniqueCode)
+    {
+      CheckResetPasswordUniqueCodeRequest request = new CheckResetPasswordUniqueCodeRequest
+      {
+        UniqueGeneratedCode = uniqueCode
+      };
+      var response = await this.mediator.Send(request);
+      return this.Ok(response);
+    }
+    [HttpPost("Reset")]
+    public async Task<ActionResult> Reset([FromBody] ResetPasswordRequest resetRequest)
+    {
+      ResetPasswordResponse response = await this.mediator.Send(resetRequest);
+      return this.Ok(response);
+
+
+
+    }
+
+
+
+
+  }
 
 }
