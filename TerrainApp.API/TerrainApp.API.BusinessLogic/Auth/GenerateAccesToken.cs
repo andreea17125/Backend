@@ -24,11 +24,6 @@ namespace TerrainApp.API.BusinessLogic.Auth
         public string GenerateAccessToken(string Email,string role)
         {
 
-            var claims = new List<Claim>
-                                         {
-                           new Claim(ClaimTypes.Name, Email),
-                           new Claim(ClaimTypes.Role,role)
-                                         };
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes("averylongsecretkeythatisrequiredtobeused");
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -36,14 +31,20 @@ namespace TerrainApp.API.BusinessLogic.Auth
                 Subject = new ClaimsIdentity(new Claim[]
                 {
                 new Claim(ClaimTypes.Name, Email),
-                 new Claim(ClaimTypes.Role,role)
+                 new Claim("UserRole",role),
+                 new Claim(JwtRegisteredClaimNames.Exp, new DateTimeOffset(DateTime.UtcNow.AddMinutes(5)).ToUnixTimeSeconds().ToString())
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(5),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
+            var jwtToken = tokenHandler.WriteToken(token);
+
+            Console.WriteLine($"Generated Token: {jwtToken}");
+            return jwtToken;
+
+
 
 
 

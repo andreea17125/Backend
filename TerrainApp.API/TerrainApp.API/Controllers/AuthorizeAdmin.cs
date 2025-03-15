@@ -43,7 +43,8 @@ namespace TerrainApp.API.Controllers
                 {
                     tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
 
-                    var role = (validatedToken as JwtSecurityToken).Claims.FirstOrDefault(Claim =>Claim.Type == ClaimTypes.Role) ;
+                 var role = (validatedToken as JwtSecurityToken).Claims
+                .FirstOrDefault(c => c.Type == "role");
                     return role != null&&role.Value == "Admin";
                 }
                 catch(Exception ex) 

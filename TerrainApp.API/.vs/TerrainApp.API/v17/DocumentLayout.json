@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.businesslogic\\auth\\generateaccestoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|solutionrelative:terrainapp.api.businesslogic\\auth\\generateaccestoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api\\controllers\\authorizeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|solutionrelative:terrainapp.api\\controllers\\authorizeadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api\\controllers\\authorizetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|solutionrelative:terrainapp.api\\controllers\\authorizetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.businesslogic\\auth\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|solutionrelative:terrainapp.api.businesslogic\\auth\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}|TerrainApp.API.CommonDomain\\TerrainApp.API.CommonDomain.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.commondomain\\enumuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8D6534C-2FF2-4C09-9E90-04EDC629C6CA}|TerrainApp.API.CommonDomain\\TerrainApp.API.CommonDomain.csproj|solutionrelative:terrainapp.api.commondomain\\enumuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api\\controllers\\authorizetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|solutionrelative:terrainapp.api\\controllers\\authorizetoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2E32FF9C-5C2F-4858-B469-C5E57EF01065}|TerrainApp.API\\TerrainApp.API.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{23F117F1-D2EC-417F-889D-B87C06B1863E}|TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.repositories\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{23F117F1-D2EC-417F-889D-B87C06B1863E}|TerrainApp.API.Repositories\\TerrainApp.API.Repositories.csproj|solutionrelative:terrainapp.api.repositories\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.businesslogic\\auth\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|solutionrelative:terrainapp.api.businesslogic\\auth\\login\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.businesslogic\\auth\\login\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B416A83E-931F-4348-90D7-6A453FD64318}|TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.domain\\requestregister\\registerrequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B416A83E-931F-4348-90D7-6A453FD64318}|TerrainApp.API.Domain\\TerrainApp.API.Domain.csproj|solutionrelative:terrainapp.api.domain\\requestregister\\registerrequeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.businesslogic\\auth\\generateaccestoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|solutionrelative:terrainapp.api.businesslogic\\auth\\generateaccestoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A623EA6-445A-4BAF-BB62-269AEA6361B2}|TerrainApp.API.BusinessLogic\\TerrainApp.API.BusinessLogic.csproj|c:\\users\\acer\\desktop\\terrain\\backend\\terrainapp.api\\terrainapp.api.businesslogic\\outsourceddata\\fetchcities\\fetchcitieshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -418,58 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SendEmail.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\SendEmail.cs",
-              "RelativeDocumentMoniker": "TerrainApp.API.Repositories\\SendEmail.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\SendEmail.cs",
-              "RelativeToolTip": "TerrainApp.API.Repositories\\SendEmail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T19:54:53.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.CommonDomain\\ResponseDto.cs",
-              "RelativeDocumentMoniker": "TerrainApp.API.CommonDomain\\ResponseDto.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.CommonDomain\\ResponseDto.cs",
-              "RelativeToolTip": "TerrainApp.API.CommonDomain\\ResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T07:55:53.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "TerrainApp.API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwCAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T19:14:48.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "TerrainApp.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T08:07:47.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginRequest.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginRequest.cs",
@@ -481,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\AdminController.cs",
@@ -494,33 +443,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AuthorizeToken.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthorizeToken.cs",
               "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\AuthorizeToken.cs",
               "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthorizeToken.cs",
               "RelativeToolTip": "TerrainApp.API\\Controllers\\AuthorizeToken.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwC4AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwC4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T17:10:26.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthorizeAdmin.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthorizeAdmin.cs",
               "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\AuthorizeAdmin.cs",
               "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthorizeAdmin.cs",
               "RelativeToolTip": "TerrainApp.API\\Controllers\\AuthorizeAdmin.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAYwDAAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwC8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-02T18:12:40.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EnumUser.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.CommonDomain\\EnumUser.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.CommonDomain\\EnumUser.cs",
@@ -533,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Program.cs",
               "RelativeDocumentMoniker": "TerrainApp.API\\Program.cs",
@@ -546,7 +495,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
+              "Title": "LoginHandler.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
+              "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
+              "RelativeToolTip": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwEwAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T08:11:43.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenerateAccesToken.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
+              "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
+              "RelativeToolTip": "TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwCYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-02T18:02:09.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TerrainApp.API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T08:07:47.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "TerrainApp.API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwCAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T19:14:48.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.CommonDomain\\ResponseDto.cs",
+              "RelativeDocumentMoniker": "TerrainApp.API.CommonDomain\\ResponseDto.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.CommonDomain\\ResponseDto.cs",
+              "RelativeToolTip": "TerrainApp.API.CommonDomain\\ResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T07:55:53.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SendEmail.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\SendEmail.cs",
+              "RelativeDocumentMoniker": "TerrainApp.API.Repositories\\SendEmail.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\SendEmail.cs",
+              "RelativeToolTip": "TerrainApp.API.Repositories\\SendEmail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T19:54:53.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "LoginValidator.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginValidator.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginValidator.cs",
@@ -558,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "LoginResponse.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginResponse.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginResponse.cs",
@@ -570,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "CheckResetPasswordUniqueCodeValidator.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\CheckResetPasswordUniqueCode\\CheckResetPasswordUniqueCodeValidator.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\CheckResetPasswordUniqueCode\\CheckResetPasswordUniqueCodeValidator.cs",
@@ -582,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "CheckResetPasswordUniqueCodeResponse.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\CheckResetPasswordUniqueCode\\CheckResetPasswordUniqueCodeResponse.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\CheckResetPasswordUniqueCode\\CheckResetPasswordUniqueCodeResponse.cs",
@@ -594,19 +620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginHandler.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
-              "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
-              "RelativeToolTip": "TerrainApp.API.BusinessLogic\\Auth\\Login\\LoginHandler.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwEgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T08:11:43.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "TerrainController.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\TerrainController.cs",
               "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\TerrainController.cs",
@@ -618,7 +632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "GuestController.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API\\Controllers\\GuestController.cs",
               "RelativeDocumentMoniker": "TerrainApp.API\\Controllers\\GuestController.cs",
@@ -630,7 +644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ResetPasswordHandler.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\ResetPassword\\ResetPasswordHandler.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\ResetPassword\\ResetPasswordHandler.cs",
@@ -643,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "UserRoleDto.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.CommonDomain\\UserRoleDto.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.CommonDomain\\UserRoleDto.cs",
@@ -655,7 +669,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "UserRegisterRequest.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\RequestRegister\\UserRegisterRequest.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.Domain\\RequestRegister\\UserRegisterRequest.cs",
@@ -667,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\UserDomain\\User.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.Domain\\UserDomain\\User.cs",
@@ -679,7 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "TerrainRepository.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Repositories\\TerrainRepository.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.Repositories\\TerrainRepository.cs",
@@ -691,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "RegisterRequestStatus.cs",
               "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.Domain\\RequestRegister\\RegisterRequestStatus.cs",
               "RelativeDocumentMoniker": "TerrainApp.API.Domain\\RequestRegister\\RegisterRequestStatus.cs",
@@ -700,18 +714,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T07:55:58.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GenerateAccesToken.cs",
-              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
-              "RelativeDocumentMoniker": "TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
-              "ToolTip": "C:\\Users\\ACER\\Desktop\\terrain\\Backend\\TerrainApp.API\\TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
-              "RelativeToolTip": "TerrainApp.API.BusinessLogic\\Auth\\GenerateAccesToken.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwBoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T18:02:09.284Z"
             },
             {
               "$type": "Document",
