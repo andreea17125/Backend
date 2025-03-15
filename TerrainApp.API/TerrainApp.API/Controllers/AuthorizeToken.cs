@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.AspNetCore.Mvc;
@@ -28,6 +29,7 @@ namespace TerrainApp.API.Controllers
         public bool ValidateToken(string token)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
+
             var validationParameters = new TokenValidationParameters
             {
                 ValidateIssuerSigningKey = true,
@@ -41,6 +43,12 @@ namespace TerrainApp.API.Controllers
             try
             {
                 tokenHandler.ValidateToken(token, validationParameters, out SecurityToken validatedToken);
+                var role = (validatedToken as JwtSecurityToken).Claims.FirstOrDefault(Claim => Claim.Type == ClaimTypes.Role);
+              
+                if (role != null && role.Value == "Admin") {
+                    return true;
+                }
+
 
                 return validatedToken is JwtSecurityToken;
             }

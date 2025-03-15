@@ -6,13 +6,14 @@ using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCities;
 using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCountries;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.GetAllUserRegisterRequests;
+using TerrainApp.API.BusinessLogic.RegisterUserRequest.RejectUserRegisterRequest;
 using TerrainApp.API.BusinessLogic.Users.Register;
 
 namespace TerrainApp.API.Controllers
 {
     [ApiController]
     [Route("api/admin")]
-    //[AuthorizeAdmin]
+    [AuthorizeAdmin]
     public class AdminController : ControllerBase
     {
         private readonly IMediator mediator;
@@ -58,7 +59,7 @@ namespace TerrainApp.API.Controllers
         [HttpPut("RejectUserRegistrationRequest/{id}")]
         public async Task<ActionResult> RejectUserRequest(string id, CancellationToken cancellationToken)
         {
-            ApproveUserRegistrationRequest approveUserRegistrationRequest = new ApproveUserRegistrationRequest
+            RejectUserRegistrationRequest approveUserRegistrationRequest = new RejectUserRegistrationRequest
             {
                 Id = id
             };

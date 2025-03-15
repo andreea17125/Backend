@@ -24,11 +24,13 @@ using TerrainApp.API.BusinessLogic.Users.Register;
 using TerrainApp.API.BusinessLogic.Users.Update;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Domain.UserDomain;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TerrainApp.API.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
+  //[AuthorizeToken]
 
   public class UserController : ControllerBase
   {
@@ -68,6 +70,7 @@ namespace TerrainApp.API.Controllers
         
 
         [HttpGet("GetAvailableRoles")]
+        [AllowAnonymous]
     public async Task<ActionResult> GetUserRoles(CancellationToken cancellationToken)
     {
       GetAvailableUserRolesRequest request = new GetAvailableUserRolesRequest();
