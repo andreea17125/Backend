@@ -30,83 +30,48 @@ namespace TerrainApp.API.Controllers
 {
   [ApiController]
   [Route("api/[controller]")]
-  //[AuthorizeToken]
+    //[AuthorizeToken]
 
-  public class UserController : ControllerBase
-  {
-    IMongoCollection<User> _users;
-    IMediator mediator;
-
-    public UserController(IDataBase dataBase, IMediator mediator)
+    public class UserController : ControllerBase
     {
-      this.mediator = mediator;
-      this._users = dataBase.GetMongoDatabase().GetCollection<User>("Users");
-    }
+        private readonly IMediator mediator;
 
-    [HttpPost("RequestRegister")]
-    public async Task<ActionResult> RejectUserRequest(CreateRegisterRequestRequest request, CancellationToken cancellationToken)
-    {
-      var response = await this.mediator.Send(request, cancellationToken);
-      return this.Ok(response);
-    }
-    [HttpGet("FetchCountries")]
-    public async Task<ActionResult> FetchCountries(CancellationToken cancellationToken)
-    {
-      FetchCountriesRequest request = new FetchCountriesRequest();
-      var response = await this.mediator.Send(request, cancellationToken);
-      return this.Ok(response);
-    }
-   
-
-        [HttpGet("FetchCities/{country}")]
-       public async Task<ActionResult> FetchCities(string country, CancellationToken cancellationToken)
+        public UserController(IMediator mediator)
         {
-            FetchCitiesRequest request = new FetchCitiesRequest { Country = country };
+            this.mediator = mediator;
+        }
+
+        [HttpPost("RequestRegister")]
+        public async Task<ActionResult> RequestRegister(CreateRegisterRequestRequest request, CancellationToken cancellationToken)
+        {
             var response = await this.mediator.Send(request, cancellationToken);
             return this.Ok(response);
         }
 
+        [HttpGet("FetchCountries")]
+        public async Task<ActionResult> FetchCountries(CancellationToken cancellationToken)
+        {
+            FetchCountriesRequest request = new();
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
 
-        
+        [HttpGet("FetchCities/{country}")]
+        public async Task<ActionResult> FetchCities(string country, CancellationToken cancellationToken)
+        {
+            FetchCitiesRequest request = new() { Country = country };
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
 
         [HttpGet("GetAvailableRoles")]
         [AllowAnonymous]
-    public async Task<ActionResult> GetUserRoles(CancellationToken cancellationToken)
-    {
-      GetAvailableUserRolesRequest request = new GetAvailableUserRolesRequest();
-      var response = await this.mediator.Send(request, cancellationToken);
-      return this.Ok(response);
+        public async Task<ActionResult> GetUserRoles(CancellationToken cancellationToken)
+        {
+            GetAvailableUserRolesRequest request = new();
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
     }
 
-    [HttpPut("UpdateUser")]
-    public async Task<ActionResult> UpdateUser(UpdateUserRequest user)
-    {
-      UpdateUserResponse response = await this.mediator.Send(user);
-      return this.Ok(response);
-    }
-
-    [HttpDelete("DeleteUser/{id}")]
-    public async Task<ActionResult> DeleteUser(string id)
-    {
-      var deleteUserRequest = new DeleteUserRequest { UserId = id };
-      DeleteUserResponse response = await this.mediator.Send(deleteUserRequest);
-      return this.Ok(response);
-    }
-
-    [HttpGet("GetUser/{id}")]
-    public async Task<ActionResult> GetUser(string id)
-    {
-      var getUserRequest = new GetUserRequest { UserId = id };
-      GetUserResponse response = await this.mediator.Send(getUserRequest);
-      return this.Ok(response);
-    }
-
-    [HttpGet("GetAllUsers")]
-    public async Task<ActionResult> GetAllUsers()
-    {
-      var getAllUsersRequest = new GetAllUsersRequest();
-      GetAllUsersResponse response = await this.mediator.Send(getAllUsersRequest);
-      return this.Ok(response);
-    }
-  }
 }

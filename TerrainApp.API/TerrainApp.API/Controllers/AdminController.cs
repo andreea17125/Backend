@@ -14,9 +14,11 @@ namespace TerrainApp.API.Controllers
     [ApiController]
     [Route("api/admin")]
     [AuthorizeAdmin]
+ 
     public class AdminController : ControllerBase
     {
         private readonly IMediator mediator;
+
         public AdminController(IMediator mediator)
         {
             this.mediator = mediator;
@@ -25,20 +27,33 @@ namespace TerrainApp.API.Controllers
         [HttpPut("ApproveUserRegistrationRequest/{id}")]
         public async Task<ActionResult> ApproveUserRequest(string id, CancellationToken cancellationToken)
         {
-            ApproveUserRegistrationRequest approveUserRegistrationRequest = new ApproveUserRegistrationRequest
-            {
-                Id = id
-            };
-            var response = await this.mediator.Send(approveUserRegistrationRequest, cancellationToken);
+            var request = new ApproveUserRegistrationRequest { Id = id };
+            var response = await this.mediator.Send(request, cancellationToken);
             return this.Ok(response);
         }
 
-    [HttpPost("ImportCountries")]
-    public async Task<ActionResult> ImportCountries(ImportCountriesRequest request, CancellationToken cancellationToken)
-    {
-      var response = await this.mediator.Send(request, cancellationToken);
-      return this.Ok(response);
-    }
+        [HttpPut("RejectUserRegistrationRequest/{id}")]
+        public async Task<ActionResult> RejectUserRequest(string id, CancellationToken cancellationToken)
+        {
+            var request = new RejectUserRegistrationRequest { Id = id };
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
+
+        [HttpGet("GetUserRegistrationRequests")]
+        public async Task<ActionResult> GetUserRequests(CancellationToken cancellationToken)
+        {
+            var request = new GetAllUserRegisterRequestsRequest();
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
+
+        [HttpPost("ImportCountries")]
+        public async Task<ActionResult> ImportCountries(ImportCountriesRequest request, CancellationToken cancellationToken)
+        {
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+        }
 
         [HttpPost("ImportCities")]
         public async Task<ActionResult> ImportCities(ImportCitiesRequest request, CancellationToken cancellationToken)
@@ -46,26 +61,7 @@ namespace TerrainApp.API.Controllers
             var response = await this.mediator.Send(request, cancellationToken);
             return this.Ok(response);
         }
-
-        [HttpGet("GetUserRegistrationRequest")]
-    public async Task<ActionResult> GetUserRequest(CancellationToken cancellationToken)
-  
-        {
-            GetAllUserRegisterRequestsRequest GetAllUserRegistrationRequest = new();
-
-            var response = await this.mediator.Send(GetAllUserRegistrationRequest, cancellationToken);
-            return this.Ok(response);
-        }
-        [HttpPut("RejectUserRegistrationRequest/{id}")]
-        public async Task<ActionResult> RejectUserRequest(string id, CancellationToken cancellationToken)
-        {
-            RejectUserRegistrationRequest approveUserRegistrationRequest = new RejectUserRegistrationRequest
-            {
-                Id = id
-            };
-            var response = await this.mediator.Send(approveUserRegistrationRequest, cancellationToken);
-            return this.Ok(response);
-        }
     }
+
 
 }
