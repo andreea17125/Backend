@@ -30,8 +30,8 @@ namespace TerrainApp.API.BusinessLogic.Auth
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                new Claim(ClaimTypes.Name, Email),
-                 new Claim("UserRole",role),
+                new Claim(ClaimTypes.Name, Email+"-"+role),
+                
                  new Claim(JwtRegisteredClaimNames.Exp, new DateTimeOffset(DateTime.UtcNow.AddMinutes(5)).ToUnixTimeSeconds().ToString())
                 }),
                 Expires = DateTime.UtcNow.AddMinutes(5),

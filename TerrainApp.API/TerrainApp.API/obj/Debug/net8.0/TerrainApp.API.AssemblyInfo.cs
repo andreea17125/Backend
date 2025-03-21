@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TerrainApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e26f8da6e32022396647ba3349229b85d09b73b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca9e5b03d8ae0654be4f1d4b1372077610669579")]
 [assembly: System.Reflection.AssemblyProductAttribute("TerrainApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TerrainApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
