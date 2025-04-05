@@ -7,6 +7,7 @@ using TerrainApp.API.BusinessLogic.OutSourcedData.ImportCountries;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.ApproveRegisterRequest;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.GetAllUserRegisterRequests;
 using TerrainApp.API.BusinessLogic.RegisterUserRequest.RejectUserRegisterRequest;
+using TerrainApp.API.BusinessLogic.Terrain.Import;
 using TerrainApp.API.BusinessLogic.Users.Delete;
 using TerrainApp.API.BusinessLogic.Users.Register;
 
@@ -68,6 +69,13 @@ namespace TerrainApp.API.Controllers
             var deleteUserRequest = new DeleteUserRequest { UserId = id };
             DeleteUserResponse response = await this.mediator.Send(deleteUserRequest);
             return this.Ok(response);
+        }
+        [HttpPost("ImportProperties")]
+        public async Task<IActionResult> ImportProperties([FromBody] ImportTerrainRequest request, CancellationToken cancellationToken)
+        {
+            var response = await this.mediator.Send(request, cancellationToken);
+            return this.Ok(response);
+
         }
     }
 

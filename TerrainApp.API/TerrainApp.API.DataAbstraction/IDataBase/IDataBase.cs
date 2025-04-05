@@ -2,6 +2,7 @@
 using TerrainApp.API.CommonDomain;
 using TerrainApp.API.Domain;
 using TerrainApp.API.Domain.RequestRegister;
+using TerrainApp.API.Domain.Terrain;
 using TerrainApp.API.Domain.UserDomain;
 
 namespace TerrainApp.API.DataAbstraction.IDataBase
@@ -22,7 +23,9 @@ namespace TerrainApp.API.DataAbstraction.IDataBase
 
     public IMongoCollection<City> GetCitiesCollection();
 
+    public IMongoCollection<Properties> GetPropertiesCollection();
 
-   
-  }
+
+
+    }
 }

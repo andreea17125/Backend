@@ -2,6 +2,7 @@ using System.Net;
 using System.Reflection;
 using FluentValidation.AspNetCore;
 using Microsoft.OpenApi.Models;
+using TerrainApp.API;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Database.DataBase;
 using TerrainApp.API.Repositories;
@@ -117,6 +118,8 @@ internal class Program
         app.UseAuthorization();
 
         app.MapControllers();
+
+        app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
         app.Run();
     }

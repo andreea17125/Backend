@@ -49,6 +49,7 @@ namespace TerrainApp.API.Repositories
 
         public async Task<bool> Update(User document)
         {
+            this.db.GetUserCollection().Aggregate();
             var filter = Builders<User>.Filter.Eq(x => x.Id,document.Id);
             var update = Builders<User>.Update.Set(x => x.FirstName, document.FirstName).Set(x => x.LastName, document.LastName);
             await this.db.GetUserCollection().UpdateOneAsync(filter,update);

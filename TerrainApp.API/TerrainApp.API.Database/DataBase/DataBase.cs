@@ -8,60 +8,65 @@ using TerrainApp.API.CommonDomain;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Domain;
 using TerrainApp.API.Domain.RequestRegister;
+using TerrainApp.API.Domain.Terrain;
 using TerrainApp.API.Domain.UserDomain;
 
 namespace TerrainApp.API.Database.DataBase
 {
 
-  public class DataBase : IDataBase
-  {
-    private readonly IMongoClient _mongoClient;
-    private readonly IMongoDatabase _mongoDatabase;
-    private string Connection = "mongodb+srv://andreea17125:andreea17125@cluster0.6kkuj.mongodb.net/";
-    private string DataBaseName = "TerrainDB";
-
-    public DataBase()
+    public class DataBase : IDataBase
     {
-      this._mongoClient = new MongoClient(Connection);
-      this._mongoDatabase = _mongoClient.GetDatabase(DataBaseName);
+        private readonly IMongoClient _mongoClient;
+        private readonly IMongoDatabase _mongoDatabase;
+        private string Connection = "mongodb+srv://andreea17125:andreea17125@cluster0.6kkuj.mongodb.net/";
+        private string DataBaseName = "TerrainDB";
 
-    }
+        public DataBase()
+        {
+            this._mongoClient = new MongoClient(Connection);
+            this._mongoDatabase = _mongoClient.GetDatabase(DataBaseName);
 
-    public IMongoDatabase GetMongoDatabase()
-    {
+        }
 
-      return this._mongoDatabase;
-    }
+        public IMongoDatabase GetMongoDatabase()
+        {
 
-    public IMongoCollection<User> GetUserCollection()
-    {
-      return this._mongoDatabase.GetCollection<User>("Users");
-    }
-    public IMongoCollection<Terrain> GetTerrainCollection()
-    {
-      return this._mongoDatabase.GetCollection<Terrain>("Terrains");
-    }
-    public IMongoCollection<LoginHistory> GetLoginHistoryCollection()
-    {
-      return this._mongoDatabase.GetCollection<LoginHistory>("LoginHistory");
-    }
+            return this._mongoDatabase;
+        }
 
-    public IMongoCollection<UserRegisterRequest> GetUserRegistrationCollection()
-    {
-      return this._mongoDatabase.GetCollection<UserRegisterRequest>("RegistrationRequest");
-    }
+        public IMongoCollection<User> GetUserCollection()
+        {
+            return this._mongoDatabase.GetCollection<User>("Users");
+        }
+        public IMongoCollection<Terrain> GetTerrainCollection()
+        {
+            return this._mongoDatabase.GetCollection<Terrain>("Terrains");
+        }
+        public IMongoCollection<LoginHistory> GetLoginHistoryCollection()
+        {
+            return this._mongoDatabase.GetCollection<LoginHistory>("LoginHistory");
+        }
 
-    public IMongoCollection<Country> GetCountriesCollection()
-    {
-      return this._mongoDatabase.GetCollection<Country>("Countries");
-    }
+        public IMongoCollection<UserRegisterRequest> GetUserRegistrationCollection()
+        {
+            return this._mongoDatabase.GetCollection<UserRegisterRequest>("RegistrationRequest");
+        }
+
+        public IMongoCollection<Country> GetCountriesCollection()
+        {
+            return this._mongoDatabase.GetCollection<Country>("Countries");
+        }
 
         public IMongoCollection<City> GetCitiesCollection()
         {
             return this._mongoDatabase.GetCollection<City>("Cities");
         }
-    }
-    
-      
 
+        public IMongoCollection<Properties> GetPropertiesCollection()
+        {
+            return this._mongoDatabase.GetCollection<Properties>("Properties");
+        }
+
+    }
 }
+    
