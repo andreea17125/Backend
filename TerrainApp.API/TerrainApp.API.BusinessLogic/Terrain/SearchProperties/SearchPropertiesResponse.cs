@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
 {
-    internal class SearchPropertiesResponse
+    public class SearchPropertiesResponse
     {
+       public List<PropertieDto> PropertieDto { get; set; } = new List<PropertieDto>();
     }
 }

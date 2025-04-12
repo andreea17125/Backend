@@ -1,22 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MediatR;
-using TerrainApp.API.BusinessLogic.RegisterUserRequest.CreateUserRegisterRequest;
+﻿using MediatR;
+using TerrainApp.API.DataAbstraction.IDataBase;
 
 namespace TerrainApp.API.BusinessLogic.Terrain.Import
 {
-    public class ImportTerrainHandler : IRequestHandler<ImportTerrainRequest, ImportTerrainResponse>
-    {
-        public async Task<ImportTerrainResponse> Handle(ImportTerrainRequest request, CancellationToken cancellationToken)
-        {
-            List<ImportedDataDto>RawDataList = new List<ImportedDataDto>();
-           
+  public class ImportTerrainHandler : IRequestHandler<ImportTerrainRequest, ImportTerrainResponse>
+  {
+    private readonly IDataBase dataBase;
 
-            return new ImportTerrainResponse();
+    public ImportTerrainHandler(IDataBase dataBase)
+    {
+      this.dataBase = dataBase;
+    }
+    public async Task<ImportTerrainResponse> Handle(ImportTerrainRequest request, CancellationToken cancellationToken)
+    {
+      return new ImportTerrainResponse { };
+
         }
 
-    }
+  }
 }

@@ -14,30 +14,23 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
 {
-    public class SearchPropertiesHandler : IRequestHandler<SearchPropertiesRequest, SearchPropertiesResponse>
+  public class SearchPropertiesHandler : IRequestHandler<SearchPropertiesRequest, SearchPropertiesResponse>
+  {
+    private readonly IDataBase dataBase;
+
+    public SearchPropertiesHandler(IDataBase dataBase)
     {
-         private readonly IDataBase dataBase;
-
-        public SearchPropertiesHandler(IDataBase dataBase)
-        {
-            this.dataBase = dataBase;
-        }
-        public async Task<SearchPropertiesResponse> Handle(SearchPropertiesRequest request, CancellationToken cancellationToken)
-        {
-            var Collection = dataBase.GetPropertiesCollection();
-            var pipeline = new EmptyPipelineDefinition<Properties>();
-            var data = Collection.Aggregate(pipeline).ToList();
-
-
-
-
-
-
-
-
-
-
-
-        }
+      this.dataBase = dataBase;
     }
+    public async Task<SearchPropertiesResponse> Handle(SearchPropertiesRequest request, CancellationToken cancellationToken)
+    {
+      var Collection = dataBase.GetPropertiesCollection();
+      var docs = await Collection.Aggregate().Project(Builders<Properties>.Projection.Include(x => x.PropType)).As<PropertieDto>().ToListAsync(cancellationToken);
+      return new SearchPropertiesResponse
+      {
+        PropertieDto = docs
+      };
+
+    }
+  }
 }
