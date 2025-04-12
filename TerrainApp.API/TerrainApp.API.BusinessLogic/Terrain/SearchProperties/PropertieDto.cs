@@ -15,5 +15,12 @@ namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
     public string Id {  get; set; } = string.Empty;
+
+    
+    public int? Sale_price { get; set; }
+
+    [BsonElement("Nr_of_rms")]
+    public int Rooms { get; set; }
+
   }
 }

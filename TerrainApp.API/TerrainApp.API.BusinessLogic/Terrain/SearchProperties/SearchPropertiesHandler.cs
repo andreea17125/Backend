@@ -24,12 +24,37 @@ namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
     }
     public async Task<SearchPropertiesResponse> Handle(SearchPropertiesRequest request, CancellationToken cancellationToken)
     {
-      var Collection = dataBase.GetPropertiesCollection();
-      var docs = await Collection.Aggregate().Project(Builders<Properties>.Projection.Include(x => x.PropType)).As<PropertieDto>().ToListAsync(cancellationToken);
+      var collection = dataBase.GetPropertiesCollection();
+
+      var filterBuilder = Builders<Properties>.Filter;
+
+      var filter = filterBuilder.Gte(x => x.Sale_Price, request.Sale_Price_Start) &
+                   filterBuilder.Lte(x => x.Sale_Price, request.Sale_Price_End) &
+                   filterBuilder.Gte(x => x.Rooms, request.Rooms_Start) &
+                   filterBuilder.Lte(x => x.Rooms, request.Rooms_End);
+
+      if (!string.IsNullOrEmpty(request.PropType))
+      {
+        filter &= filterBuilder.Eq(x => x.PropType, request.PropType);
+      }
+
+      var projection = Builders<Properties>.Projection
+          .Include(x => x.PropType)
+          .Include(x => x.Sale_Price)
+          .Include(x => x.Rooms);
+
+      var docs = await collection.Aggregate()
+          .Match(filter)
+          .Project(projection)
+          .Limit(10)
+          .As<PropertieDto>()
+          .ToListAsync(cancellationToken);
+
       return new SearchPropertiesResponse
       {
         PropertieDto = docs
       };
+
 
     }
   }
