@@ -31,9 +31,11 @@ namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
       var filter = filterBuilder.Gte(x => x.Sale_Price, request.Sale_Price_Start) &
                    filterBuilder.Lte(x => x.Sale_Price, request.Sale_Price_End) &
                    filterBuilder.Gte(x => x.Rooms, request.Rooms_Start) &
-                   filterBuilder.Lte(x => x.Rooms, request.Rooms_End);
+                   filterBuilder.Lte(x => x.Rooms, request.Rooms_End)&
+                   filterBuilder.Gte(x => x.HBath, request.HBath_Start) &
+                    filterBuilder.Lte(x => x.HBath, request.HBath_End);
 
-      if (!string.IsNullOrEmpty(request.PropType))
+            if (!string.IsNullOrEmpty(request.PropType))
       {
         filter &= filterBuilder.Eq(x => x.PropType, request.PropType);
       }
@@ -45,8 +47,8 @@ namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
 
       var docs = await collection.Aggregate()
           .Match(filter)
-          .Project(projection)
-          .Limit(10)
+          .Project(projection).Skip(request.SkipCount*request.TakeCount)
+          .Limit(request.TakeCount)
           .As<PropertieDto>()
           .ToListAsync(cancellationToken);
 

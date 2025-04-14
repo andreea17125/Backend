@@ -21,6 +21,6 @@ namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
 
     [BsonElement("Nr_of_rms")]
     public int Rooms { get; set; }
-
-  }
+    public int HBath { get; set; } = 0;
+    }
 }

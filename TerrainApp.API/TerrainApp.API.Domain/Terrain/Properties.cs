@@ -39,8 +39,8 @@ namespace TerrainApp.API.Domain.Terrain
 
     public int Bdrms { get; set; } = 0;
     public int FBath { get; set; } = 0;
-
-    public int HBath { get; set; } = 0;
+    [BsonElement("Hbath")]
+     public int HBath { get; set; } = 0;
 
     public int Lotsize { get; set; } = 0;
 

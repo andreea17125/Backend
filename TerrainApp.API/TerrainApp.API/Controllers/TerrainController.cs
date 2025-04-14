@@ -1,10 +1,12 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using TerrainApp.API.BusinessLogic.Terrain.GetPropertyNames;
 using TerrainApp.API.BusinessLogic.Terrain.SearchProperties;
 using TerrainApp.API.DataAbstraction.IDataBase;
 using TerrainApp.API.Domain.Terrain;
 using TerrainApp.API.Domain.UserDomain;
+using XAct.Messages;
 
 namespace TerrainApp.API.Controllers
 {
@@ -65,5 +67,13 @@ namespace TerrainApp.API.Controllers
 
       return this.Ok(Terrain);
     }
-  }
+        [HttpGet("GetPropertyNames")]
+        public async Task<ActionResult> GetPropertyNames()
+        {
+
+            var request = new GetPropertyNamesRequest();
+            var response = await this.mediator.Send(request);
+            return this.Ok(response);
+        }
+    }
 }

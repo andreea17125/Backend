@@ -32,7 +32,11 @@ namespace TerrainApp.API.BusinessLogic.Terrain.SearchProperties
 
     public int HBath_End { get; set; } = 1000000;
 
+    public int SkipCount { get; set; } = 0;
+
+     public int TakeCount { get; set; } = 10;
 
 
-  }
+
+    }
 }
